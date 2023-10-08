@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://ysccx76orqu7"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_0fx4i"]
+[ext_resource type="PackedScene" uid="uid://vhi1w0o3lwcj" path="res://map/map.tscn" id="1_xrlys"]
+[ext_resource type="PackedScene" uid="uid://drgv17cmondo8" path="res://player/player.tscn" id="2_lfwc8"]
+[ext_resource type="PackedScene" uid="uid://crdmcnrdlujij" path="res://hud/hud.tscn" id="3_iovc4"]
+[ext_resource type="PackedScene" uid="uid://bo5xhx52647cx" path="res://turret/Turret.tscn" id="5_w34sh"]
+
+[sub_resource type="Environment" id="Environment_h3qgq"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0fx4i")
+
+[node name="Map" parent="." instance=ExtResource("1_xrlys")]
+
+[node name="Player" parent="." instance=ExtResource("2_lfwc8")]
+z_index = 1
+position = Vector2(80, -72)
+
+[node name="HUD" parent="." instance=ExtResource("3_iovc4")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h3qgq")
+
+[node name="Turret" parent="." instance=ExtResource("5_w34sh")]
+position = Vector2(643, 200)

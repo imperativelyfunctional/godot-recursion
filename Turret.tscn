@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ooqalqj0mipx"]
+
+[ext_resource type="Texture2D" uid="uid://dc8rwjobycctc" path="res://assets/turret.png" id="1_j7egy"]
+[ext_resource type="Script" path="res://turret.gd" id="2_hq1x7"]
+
+[node name="Terrent" type="Sprite2D"]
+top_level = true
+position = Vector2(615, 199)
+texture = ExtResource("1_j7egy")
+script = ExtResource("2_hq1x7")
